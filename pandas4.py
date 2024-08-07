@@ -6,9 +6,11 @@ col_names=["preg", 'plas', 'pres', 'skin', 'test', 'mass', 'pedi', 'age', 'class
 data = pd.read_csv('./data/pima-indians-diabetes.data.csv', names = col_names)
 
 #print(data['preg'])
-#print(data.describe())
+
+
+print(data.describe().to_csv('./results/describe.csv'))
 
 plt.clf()
 plt.hist(data['age'])
 plt.show()
-plt.savefig('./age')
+plt.savefig('./age.png')
